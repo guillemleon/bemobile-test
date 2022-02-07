@@ -1,5 +1,63 @@
 .headerContainer {
-    width: 100%;
-    background-color: red;
+    position: absolute;
+    width: 100vw;
     height: 100px;
+    z-index: 999;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContent {
+    width: 1140px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: "Raleway-extraBold";
+    color: #0D0D0D;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.link {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.cartContainer {
+    display: flex;
+    position: relative;
+}
+
+.cartCounter {
+    top: -10px;
+    right: -15px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+    .headerContent {
+        width: 100vw;
+    }
 }
