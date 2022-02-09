@@ -11,17 +11,16 @@ export function get(endpoint, callback) {
         })
         .catch((err) => {
             console.log(err)
-            throw err;
         })
 }
 
-export function post(endpoint, callback, headers) {
-    axiosInst.post(endpoint, headers)
+export function post(endpoint, body, callback) {
+    axiosInst.post(endpoint, body)
         .then(res => {
             console.log(res)
+            callback(res)
         })
         .catch(err => {
             console.log(err)
-            throw err;
         })
 }

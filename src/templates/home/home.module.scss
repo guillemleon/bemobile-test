@@ -10,3 +10,19 @@
   font-size: 70px;
   font-family: "Raleway-extraBold";
 }
+
+.productsTitle {
+  font-size: 100px;
+}
+
+@media screen and (max-width: 640px) {
+  .productsTitle {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productsTitle {
+    font-size: 40px;
+  }
+}

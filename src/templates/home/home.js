@@ -14,22 +14,14 @@ function Home() {
     },[])
 
     const products = JSON.parse(localStorage.getItem('products'));
-    const [searchResult, setSearchResult] = useState(products.data);
-
-    const example = {
-        id: "ZmGrkLRPXOTpxsU4jjAcv",
-        brand: "Acer",
-        model: "Iconia Talk S",
-        price: "170",
-        imgUrl: "https://front-test-api.herokuapp.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg"
-    }
+    const [searchResult, setSearchResult] = useState(products && products.data);
 
     return (
         <Layout products={products}>
             <SearchBar allProducts={products} setSearchResult={filterProducts} />
             <h1 className={styles.productsTitle}>PRODUCTS</h1>
-            <div className={styles.productsListContainer}>
-                {searchResult.map((i) => {
+            <div id="productsList" className={styles.productsListContainer}>
+                {searchResult && searchResult.map((i) => {
                     return (
                         <ProductCard product={i} />
                     )
