@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.image {
+  width: 60%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.title {
+  font-size: 50px;
+  font-family: "Raleway-extraBold";
+}
+
+.infoContainer {
+  flex: 1;
+  padding-left: 64px;
+}
+
+.descriptionTitle {
+  font-size: 24px;
+  font-family: "Raleway-black";
+  margin: 0;
+}
+
+.featureList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature {
+  margin: 8px 0;
+}
+
+.cameraOptions {
+  display: flex;
+}
+
+.actionsList {
+  display: flex;
+  padding: 14px;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  margin: 24px 24px 24px 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,.3);
+  transition: all .2s ease-in-out;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.colorSelected {
+  @extend .color;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px black;
+}
+
+.storage {
+  width: 100px;
+  height: 50px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,.3);
+  transition: all .2s ease-in-out;
+  margin-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.storageSelected {
+  @extend .storage;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px black;
+}
+
+.addToCartButton {
+  text-transform: uppercase;
+  background-color: #0fc60f;
+  width: 400px;
+  height: 80px;
+  margin: 30px 0 200px 0;
+  color: white;
+  font-family: "Raleway-extraBold";
+  font-size: 24px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,.3);
+  cursor: pointer;
+
+  &:hover {
+    border: 3px solid #0fc60f;
+    background-color: white;
+    color: #0fc60f;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionTitle {
+    margin-top: 16px;
+  }
+  .modelTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .infoContainer {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+  }
+  .infoContainer {
+    width: 100%;
+  }
+  .addToCartButton {
+    width: 100%;
+  }
+}

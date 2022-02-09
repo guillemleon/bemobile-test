@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway-light";
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Raleway-black";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-bold";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-extraBold";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-extraLight";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-light";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-medium";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-regular";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-semiBold";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway-thin";
+  src: local("Raleway"), url(./assets/fonts/raleway/Raleway-Thin.ttf) format("truetype");
+}

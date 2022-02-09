@@ -6,11 +6,21 @@ const axiosInst = axios.create({
 
 export function get(endpoint, callback) {
     axiosInst.get(endpoint)
-        .then((res) => {
+        .then(res => {
             return callback(res)
         })
         .catch((err) => {
             console.log(err)
-            throw err;
+        })
+}
+
+export function post(endpoint, body, callback) {
+    axiosInst.post(endpoint, body)
+        .then(res => {
+            console.log(res)
+            callback(res)
+        })
+        .catch(err => {
+            console.log(err)
         })
 }

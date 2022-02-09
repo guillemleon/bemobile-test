@@ -1,0 +1,112 @@
+.productElement {
+    /*flex: 1 0 21%; !* explanation below *!*/
+    flex: 1 0 calc(25% - 16px);
+    height: calc(1140px / 4);
+    display: flex;
+    max-width: 25%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardLabel {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Raleway-bold";
+}
+
+.cardBackgroundImage {
+    width: 60%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.productModel {
+    color: white;
+    margin: 0;
+}
+
+.opacityLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(0,0,0,.5);
+
+        .seeDetailsCircle {
+            visibility: visible;
+            font-size: 14px;
+            width: 110px;
+            height: 110px;
+        }
+    }
+}
+
+.seeDetailsCircle {
+    transition: all .2s ease-in-out;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 55px;
+    background-color: darkcyan;
+    color: white;
+    font-weight: bold;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    text-align: center;
+    visibility: hidden;
+
+    &:hover {
+        visibility: visible;
+        font-size: 14px;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .productElement {
+        flex: 1 0 calc(33% - 16px);
+        height: calc(100vw / 3);
+        max-width: 33%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .productElement {
+        flex: 1 0 calc(50% - 16px);
+        height: calc(100vw / 2);
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .productElement {
+        flex: 1 0 100%;
+        height: calc(100vw);
+        max-width: 100%;
+    }
+}
