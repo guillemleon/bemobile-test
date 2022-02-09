@@ -1,17 +1,15 @@
-import './product-card.css';
+import styles from './product-card.module.scss';
 
 function ProductCard({ product }) {
 
     return (
-        <div
-            className="productElement" key={product.id}
-        >
-            <div className="cardBackgroundImage" style={{backgroundImage: `url(${product.imgUrl})`}}></div>
-            <div className="overlayer" />
-            <div className="seeDetailsCircle">SEE DETAILS</div>
-            <label className="cardLabel">
+        <div className={styles.productElement} key={product.id}>
+            <div className={styles.cardBackgroundImage} style={{backgroundImage: `url(${product.imgUrl})`}}></div>
+            <div className={styles.overlayer} />
+            <div className={styles.seeDetailsCircle}>SEE DETAILS</div>
+            <label className={styles.cardLabel}>
                 {product.brand}
-                <p className="productModel">{product.model}</p>
+                <p className={styles.productModel}>{product.model}</p>
             </label>
         </div>
     );

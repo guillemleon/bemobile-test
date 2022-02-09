@@ -1,4 +1,4 @@
-import './search-bar.css';
+import styles from './search-bar.module.scss';
 import { useForm } from "react-hook-form";
 import {useRef} from "react";
 
@@ -12,17 +12,17 @@ function SearchBar({ allProducts, setSearchResult }) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="searchBarContainer">
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.searchBarContainer}>
             <input
                 name="searchWords"
                 onKeyDown={(e) => {searchWord(e.currentTarget.value)}}
                 {...register("searchWords")}
-                className="searchBar"
+                className={styles.searchBar}
                 ref={inpt}
                 type="text"
                 placeholder="SEARCH"
             />
-            <input type="submit" className="submitButton" value={"SEARCH"} />
+            <input type="submit" className={styles.submitButton} value={"SEARCH"} />
         </form>
     );
 

@@ -1,4 +1,4 @@
-import './App.css';
+import styles from './App.module.scss';
 import {useEffect, useState} from "react";
 import {get} from "./global/functions/apiKIT";
 import Layout from "./components/layout/layout";
@@ -27,8 +27,8 @@ function App() {
   return (
     <Layout products={products}>
       <SearchBar allProducts={products} setSearchResult={filterProducts} />
-      <h1 className="productsTitle">PRODUCTS</h1>
-      <div className="productsListContainer">
+      <h1 className={styles.productsTitle}>PRODUCTS</h1>
+      <div className={styles.productsListContainer}>
         {searchResult.map((i) => {
           return (
               <ProductCard product={i} />
